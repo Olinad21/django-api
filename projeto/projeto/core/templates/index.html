@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+<title>
+    Index
+</title>
+
+{%endblock%}
+
+
+{% block content %}
+
+
+<div class="container-fluid">
+     <!-- Icon Cards-->
+            <div class="row">
+                <div id="idCard" class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-black bg-warning o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+
+                            <div class="mr-5">
+                                <br/>
+                                <strong>Ultima leitura UV: {{ult}}</strong>
+
+
+                                <input type="checkbox" id="toggle-1">
+                                <div id="mostra">
+                                    <strong>Data: {{ult.data}}<br/>
+                                        Dispositivo: {{ult.dispositivo}}<br/>
+                                        Latitude: {{ult.dispositivo.latitude}}<br/>
+                                        Longitude: {{ult.dispositivo.longitude}}<br/>
+                                    </strong>
+                                </div>
+                            </div>
+                            <a class="" href="#">
+                                <label class="lb" style="background-color: rgba(80,173,7,0);border-color: rgba(255,255,255,0)"
+                                       class="label label-info" for="toggle-1">
+                                    <i class="fas fa-plus"> </i>
+
+                                </label>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="idCard2" class="col-xl-3 col-sm-6 mb-3">
+
+                    <img class="imgUV"
+                         src="http://cancerdepelebrasil.com.br/imagens/cancer-de-pele-brasil-indice-ultravioleta.jpg"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+    <!-- DataTables Example -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i>
+            Data Table Example
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    {% if list %}
+                    <thead>
+                    <tr>
+                        <th>Dispositivo</th>
+                        <th>LeituraUV</th>
+                        <th>Data</th>
+
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    {% for item in list %}
+                    <tr>
+                        <td>{{item.dispositivo }}</td>
+                        <td>{{ item.leituraUV }}</td>
+                        <td>{{ item.data }}</td>
+
+                    </tr>
+                    {% endfor %}
+
+                    </tbody>
+                    {% else %}
+                    <p>No data are available.</p>
+                    {% endif %}
+                </table>
+            </div>
+        </div>
+        <div class="card-footer small text-muted"></div>
+    </div>
+
+    <div class="divApi">
+        <strong>
+            <p>Localização do Dipositivo</p>
+        </strong>
+        <iframe
+                frameborder="1px"
+                style="border-radius:8px"
+                src="https://www.google.com/maps/embed/v1/place?key= {{api_key}}
+                        &q={{lat.latitude}},{{long}}&zoom=14"
+                allowfullscreen class="mapApi">
+
+        </iframe>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+
+
+{% endblock %}
+<!-- /.content-wrapper -->
+
