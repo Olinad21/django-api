@@ -10,13 +10,12 @@ def index2(request):
 
 
 def index(request):
-
     today = timezone.now().date()
     tomorrow = today + timedelta(1)
     today_start = datetime.combine(today, time())
     today_end = datetime.combine(tomorrow, time())
     listO = Dados.objects.select_related('dispositivo')
-    lat = Dispositivo.objects.get(pk=1)
+    loc = Dispositivo.objects.get(pk=1)
     list = Dados.objects.all().filter(dispositivo=1).filter(data__lte=today_end, data__gte=today_start)
     ult = Dados.objects.latest('data')
     listDisp = Dispositivo.objects.all()
@@ -24,8 +23,8 @@ def index(request):
     api_key = 'AIzaSyC-gwBjleF-ixYwe5NhiF6TMVIMNe1WED4'
     contex = { 'list':list,
               'api_key': api_key,
-              'lat': lat,
-              'long': '-48.06575099999998',
+              'lat': loc,
+              'long': loc,
               'ult':ult,
               'listO':listO,
               'listDisp':listDisp,
