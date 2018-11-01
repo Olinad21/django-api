@@ -1,0 +1,220 @@
+
+# Criado por https://www.gitignore.io/api/venv,python,pycharm
+# Editar em https://www.gitignore.io/?templates=venv,python,pycharm
+
+### PyCharm ###
+# Capas JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Estúdio Android e WebStorm
+# Referência: https://intellij-support.jetbrains.com/hc/pt-br/articles/206544839
+
+# Material específico do usuário
+.*idea /
+.idea / ** / workspace.xml
+.idea / ** / tasks.xml
+.idea / ** / usage.statistics.xml
+.idea / ** / dicionários
+.idea / ** / prateleira
+
+# Arquivos gerados
+.idea / ** / contentModel.xml
+
+# Arquivos sensíveis ou de alta rotatividade
+.idea / ** / dataSources /
+.idea / ** / dataSources.ids
+.idea / ** / dataSources.local.xml
+.idea / ** / sqlDataSources.xml
+.idea / ** / dynamic.xml
+.idea / ** / uiDesigner.xml
+.idea / ** / dbnavigator.xml
+
+# Gradle
+.idea / ** / gradle.xml
+.idea / ** / libraries
+
+# Gradle e Maven com importação automática
+# Ao usar Gradle ou Maven com importação automática, você deve excluir arquivos de módulo,
+# uma vez que eles serão recriados e podem causar rotatividade. Uncomment se usando
+# importação automática.
+# .idea / modules.xml
+# .idea / *. iml
+# .idea / modules
+
+# CMake
+cmake-build - * /
+
+# Plugin do Mongo Explorer
+.idea / ** / mongoSettings.xml
+
+# Formato de projeto baseado em arquivo
+* .iws
+
+# IntelliJ
+Fora/
+
+# plugin mpeltonen / sbt-idea
+.idea_modules /
+
+# Plugin JIRA
+atlassian-ide-plugin.xml
+
+# Plug-in Cursive Clojure
+.idea / replstate.xml
+
+# Plug-in Crashlytics (para Android Studio e IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# Cliente de descanso baseado em editor
+.idea / httpRequests
+
+# Android Studio 3.1 + arquivo de cache serializado
+.idea / caches / build_file_checksums.ser
+
+### Patch PyCharm ###
+# Motivo do Comentário: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
+
+# * .iml
+# modules.xml
+# .idea / misc.xml
+# * .ipr
+
+# Plugin do Sonarlint
+.idea / sonarlint
+
+### Python ###
+# Byte-compilado / otimizado / arquivos DLL
+__pycache __ /
+* .py [cod]
+* $ py.class
+
+Extensões # C
+*.assim
+
+# Distribuição / embalagem
+.Python
+construir/
+desenvolver ovos /
+dist /
+Transferências/
+ovos/
+.ovos/
+lib /
+lib64 /
+partes /
+sdist /
+var /
+rodas /
+* .egg-info /
+.installed.cfg
+*.ovo
+MANIFESTO
+
+# PyInstaller
+# Normalmente, esses arquivos são escritos por um script python de um modelo
+# antes do PyInstaller construir o exe, para injetar data / outras informações nele.
+*.manifesto
+* .spec
+
+# Logs do instalador
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Teste de unidade / relatórios de cobertura
+htmlcov /
+.tox /
+.nox /
+.cobertura
+.cobertura.*
+.cache
+nosetests.xml
+coverage.xml
+*.tampa
+.hipótese/
+.pytest_cache /
+
+# Traduções
+* .mo
+*.maconha
+
+# Coisas do Django:
+*.registro
+local_settings.py
+db.sqlite3
+
+# Material de balão:
+instância/
+.webassets-cache
+
+# Coisas escamosas:
+.scrapy
+
+# Documentação Sphinx
+docs / _build /
+
+# PyBuilder
+alvo/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default /
+ipython_config.py
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath analisou arquivos
+* .sage.py
+
+# Ambientes
+.env
+.venv
+env /
+venv /
+ENV /
+env.bak /
+venv.bak /
+
+# Configurações do projeto Spyder
+.spyderproject
+.spyproject
+
+# Configurações do projeto de corda
+.ropeproject
+
+# documentação do mkdocs
+/local
+
+# mypy
+.mypy_cache /
+.dmypy.json
+dmypy.json
+
+# Verificador de tipo Pyre
+.pyre /
+
+### Patch de Python ###
+.venv /
+
+### Pilha Python.VirtualEnv ###
+# Virtualenv
+# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+[Bb] em
+[Ii] nclude
+[Ll] ib
+[Ll] ib64
+[Ll] ocal
+[Ss] cripts
+pyvenv.cfg
+pip-selfcheck.json
+
+### venv ###
+# Virtualenv
+# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+
+# Fim de https://www.gitignore.io/api/venv,python,pycharm

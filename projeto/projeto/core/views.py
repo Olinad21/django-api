@@ -2,7 +2,7 @@ from datetime import datetime
 from django.shortcuts import render
 from .models import Dispositivo,Dados
 from datetime import datetime, timedelta, time
-
+from django.utils import timezone
 
 # Create your views here.
 def index2(request):
@@ -11,16 +11,13 @@ def index2(request):
 
 def index(request):
 
-    today = datetime.now().date()
+    today = timezone.now().date()
     tomorrow = today + timedelta(1)
     today_start = datetime.combine(today, time())
     today_end = datetime.combine(tomorrow, time())
-    now = datetime.now()
     listO = Dados.objects.select_related('dispositivo')
     lat = Dispositivo.objects.get(pk=1)
     list = Dados.objects.all().filter(dispositivo=1).filter(data__lte=today_end, data__gte=today_start)
-    ult = Dados.objects.latest('data')
-    # list = Dados.objects.filter(Dados.objects.latest('data'))
     ult = Dados.objects.latest('data')
     listDisp = Dispositivo.objects.all()
 
