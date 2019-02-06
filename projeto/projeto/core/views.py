@@ -20,7 +20,7 @@ def index(request):
     ult = Dados.objects.latest('data')
     listDisp = Dispositivo.objects.all()
 
-    api_key = 'AIzaSyC-gwBjleF-ixYwe5NhiF6TMVIMNe1WED4'
+    api_key = 
     contex = { 'list':list,
               'api_key': api_key,
               'lat': loc,
